@@ -411,7 +411,7 @@ h1 {
   50% { transform: translateY(-6px); }
 }
 .balao.motivos {
-  bottom: 90px; /* empurra o balão para cima */
+  bottom: 190px; /* empurra o balão para cima */
 }
 
 
