@@ -417,11 +417,12 @@ h1 {
 
 @media (max-width: 480px) {
   .container {
-    max-width: 95vw;
-    width: 95vw;
-    padding: 25px 20px;
+    max-width: 90vw;
+    width: 90vw;
+    padding: 20px;
   }
 }
+
 
 
 
