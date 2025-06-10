@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Motivos para te Amar 💌</title>
+  <link rel="stylesheet" href="motivos.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <h1>Motivos para te amar 💖</h1>
+
+  <div class="cartinha">
+    <div class="titulo" id="titulo">Clique abaixo e veja o que o momo escreveu para você 💌</div>
+    <div class="descricao" id="descricao"></div>
+  </div>
+
+  
+
+  
+
+  
+
+
+  <br>
+  <button onclick="abrirCartinha()">Abrir cartinha</button>
+
+  <script>
+    const motivos = [
+      {
+        titulo: "Seu companheirismo",
+        descricao: "Independente do que aconteça, eu sei que você sempre estará ao meu lado me apoiando e me dando suporte."
+      },
+      {
+        titulo: "Seu carinho",
+        descricao: "Não existe descanso melhor que os braços do meu amor, você me acolhe de um jeito que só você sabe fazer."
+      },
+      {
+        titulo: "Suas brincadeiras",
+        descricao: "Eu amo o fato de você ser tão palhaça quanto eu, me divirto muito com você momo."
+      },
+      {
+        titulo: "Seu olhar",
+        descricao: "Você me olha como se eu fosse unico, Eu consigo sentir o seu amor só de olhar pros seus olhos perfeitos, eles valem mais que 1.000.000 de palavras."
+      },
+      {
+        titulo: "Seu sorriso",
+        descricao: "Eu passo 100% do meu tempo com você tentando te fazer sorrir, ver esse sorriso não tem preço!"
+      },
+      {
+        titulo: "Você sempre cuida de mim",
+        descricao: "Eu tenho certeza que você se preocupa mais com o meu bem estar do que eu mesmo. E eu amo quando vc passa lipbalm em mim e manda eu sentar pra tomar água 😁"
+      },
+      {
+        titulo: "Você me motiva",
+        descricao: "Você tem me ajudado a me tornar um homem cada vez melhor, Eu nunca me senti tão bem em toda minha vida."
+      },
+      {
+        titulo: "Você quer ser a mãe dos meus filhos ",
+        descricao: "Você vai ser a melhor mamãe de todas, eu tenho certeza disso. Obrigado por querer Construir uma família comigo meu amor."
+      },
+      {
+        titulo: "Sua vontade de ser uma pessoa melhor ",
+        descricao: "A cada dia que passa eu fico mais orgulhoso da mulher que você se tornou. E sempre vou te incentivar a fazer coisas boas pra sua vida."
+      },
+      {
+        titulo: "Sua inteligência",
+        descricao: "Você sempre consegue resolver seus problemas das melhores formas possíveis (menos na tpm😁). Eu tenho certeza que você vai se tornar uma profissional incrível."
+      },
+      {
+        titulo: "O seu amor pelos seus pais ",
+        descricao: "É lindo ver a forma que você demonstra o amor pelos seus pais, isso mostra o quão bom é o seu coração."
+      },
+      {
+        titulo: "Seu nigiri",
+        descricao: "Simplesmente a coisa mais fofa que existe no universo, não tem nada que eu negue depois de um nigiri da momo."
+      },
+      {
+        titulo: "Seus eu te amo",
+        descricao: "Eu amo que você faz questão de dizer que me ama varias vezes por dia, é muito bom sentir o seu amor."
+      },
+      {
+        titulo: "Seu cheiro",
+        descricao: "Seu cheiro me traz tantas memórias boas, eu ficaria dias inteiros cheirando suas roupas."
+      },
+      {
+        titulo: "Você bravinha",
+        descricao: "pensa que você brava é um leão, mas eu vejo uma gatinha desse tamanho 🤏"
+      },
+      {
+        titulo: "Seus presentes ",
+        descricao: "Você sempre acerta nos presentes, e olha que eu nunca sei falar algo que eu queira kkkkkkkkk"
+      },
+      {
+        titulo: "Comer com a mo",
+        descricao: "Melhor role de todos é comer um fast food enquanto a gente assiste qualquer coisa na TV."
+      },
+      {
+        titulo: "A gente dormindo junto",
+        descricao: "Um dos meus momentos favoritos, eu me jogo em cima da mo e ela me acolhe igual um bebezinho."
+      },
+      {
+        titulo: "Sua delicadeza",
+        descricao: "Você é muito feminina, e isso é muito atraente pra um ogro como eu kkkkkkkkk Minha eterna princesa."
+      },
+      {
+        titulo: "Sua risada",
+        descricao: "Eu tenho vontade de rir só de te ouvir dando risada, ela é única e eu sou apaixonado nela, não é atoa que eu fico fazendo palhaçada toda hora."
+      },
+      {
+        titulo: "Sua beleza",
+        descricao: "Eu simplesmente não consigo descrever o quão linda você é, tanto o exterior quanto o interior. Eu acho que Deus reservou um dos dias da criação só pra desenhar você. Uma obra divina ❤️❤️❤️"
+      },
+      {
+        titulo: "Sua voz",
+        descricao: "Doce e suave, parece um anjo falando. Eu amo que você sempre me manda áudio, é um privilégio ouvir sua voz."
+      },
+      {
+        titulo: "Sua personalidade ",
+        descricao: "Nosso relacionamento não seria tão bom sem essa sua personalidade forte, você é uma mulher completa, com um ótimo senso de humor, gostos diversos, eclética,  carinhosa, romântica e o grude do mo."
+      },
+      {
+        titulo: "Você apoia os meus sonhos",
+        descricao: "Independente do que seja, eu sei que vou ter o seu apoio pra qualquer sonho que eu tiver."
+      },
+      {
+        titulo: "Andar de mão dada com você",
+        descricao: "Eu me sinto com muita aura andando de mão dada com a mo."
+      },
+      {
+        titulo: "Seu abraço",
+        descricao: "A forma como o casal se abraça diz muito sobre o relacionamento, e o seu abraço é o meu maior abrigo."
+      },
+      {
+        titulo: "Nossa conexão fisica e emocional",
+        descricao: "Desde que nós ficamos a primeira vez eu já senti uma forte conexão física entre nós, e namorando você eu sinto como se nós fossemos uma coisa só."
+      },
+      {
+        titulo: "Sua sinceridade ",
+        descricao: "Você não tem medo de dizer o que pensa, e eu admiro muito isso."
+      },
+      {
+        titulo: "Você valoriza pequenas coisas",
+        descricao: "Você ama todos os gestos de carinho, independente do que seja."
+      },
+      {
+        titulo: "Você me respeita",
+        descricao: "Um dos pilares de um bom relacionamento, Eu te amo porque você nunca deixou de me respeitar."
+      },
+      {
+        titulo: "Sua admiração por mim",
+        descricao: "Você já disse varias vezes que admira o homem que eu sou e que se inspira em mim, eu fico muito feliz de saber que a mulher mais importante da minha vida me vê dessa forma tão linda."
+      },
+      {
+        titulo: "A vida tem mais cor com você",
+        descricao: "Namorar você melhorou infinitamente minha vida, meu mundo não existe mais sem a momo."
+      },
+      {
+        titulo: "Você é minha melhor amiga",
+        descricao: "Não existe pessoa melhor pra desabafar, fofocar, chorar no ombro e brincar que você meu amor."
+      },
+      {
+        titulo: "Nossas conversas aleatórias antes de dormir",
+        descricao: "A gente já ficou 1 hora só conversando sobre quantos insetos tem no planeta, e eram 3 da manhã kkkkkkkkk"
+      },
+      {
+        titulo: "Você torna tudo especial",
+        descricao: "Momentos que deveriam ser normais, se tornam muito especiais pra mim porque você estava lá comigo."
+      },
+      {
+        titulo: "Você nunca desite de nós",
+        descricao: "Pode acontecer o que for, você sempre vai buscar formas de nós nos resolvermos e seguirmos juntos."
+      },
+      {
+        titulo: "Você é forte e sensível ao mesmo tempo",
+        descricao: "Quem vê de fora pode te achar séria, mas eu sei o quanto você é sensivel e delicada."
+      },
+      {
+        titulo: "Você não me chama pelo meu nome",
+        descricao: " Você pode me chamar de qualquer coisa, mas nunca de Davi."
+      },
+      {
+        titulo: "Todos os nossos planos para o futuro",
+        descricao: "Eu amo quando nós conversamos sobre nosso futuro juntos, não vejo a hora de realizar tudo."
+      },
+      {
+        titulo: "O jeito que você me conta sobre qualquer coisa",
+        descricao: "Eu sempre fico reparando no quão linda você é falando sobre qualquer coisa, as vezes eu até esqueço de prestar atenção no que você esta me contando kkkkkkkkkkkkk"
+      },
+      {
+        titulo: "Você ama meu corpo",
+        descricao: "Eu amo a forma que você fala sobre o meu corpo, desde que eu namoro com você, minha autoestima nunca ficou baixa, Muito obrigado meu amor."
+      },
+      {
+        titulo: "Seu corpo",
+        descricao: "Como pode a mulher mais gostosa e perfeita de todos os universos se apaixonar por mim 😍"
+      },
+      {
+        titulo: "Quando a gente cozinha junto",
+        descricao: "Cozinhar com você foi uma das melhores coisas que eu ja fiz na vida, ainda vamos fazer varias receitinhas juntos."
+      },
+      {
+        titulo: "Você se interessa pelas coisas que eu gosto",
+        descricao: "Eu tenho uma namorada que sabe quem é Illia Topuria, Charles do bronx e Poatan, Preciso dizer mais alguma coisa? #irmasdoCircle"
+      },
+      {
+        titulo: "Você é minha força",
+        descricao: "Nos dias mais dificeis, ter você comigo é o que me mantem feliz"
+      },
+      {
+        titulo: "Seu Beijo",
+        descricao: "Beijar você é um privilégio que só eu tenho, sou viciado no sabor do seu amor."
+      },
+      {
+        titulo: "Viajar com você",
+        descricao: "Todas as nossas viagens juntos renderam lembranças incriveis, se depender de mim eu viajo o mundo inteiro com a mo."
+      },
+      {
+        titulo: "Cheirar a axila da mo",
+        descricao: "Meu momentinho de alegria, sou viciado em enfiar a cara na axila da mo e cheirar e lamber kkkkkkkkkkk"
+      },
+      {
+        titulo: "O jeito que a gente comemora datas especiais",
+        descricao: "Esse site é um exemplo do quão legal é comemorar uma data especial com a mo,Eu to ansioso só de pensar na sua reação lendo tudo isso."
+      },
+      {
+        titulo: "Tudo em Você",
+        descricao: "Depois de tudo que eu escrevi aqui, não foi o suficiente pra mostrar o tamanho do meu amor por você e o quanto você é especial pra mim. Eu te amo infiniticos minha momo bigudinha pituca neneca ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️ "
+      },
+    ];
+
+    let indice = 0;
+
+    function abrirCartinha() {
+      const titulo = document.getElementById('titulo');
+      const descricao = document.getElementById('descricao');
+
+      if (indice < motivos.length) {
+        titulo.innerText = motivos[indice].titulo;
+        descricao.innerText = motivos[indice].descricao;
+        descricao.classList.add("mostrar");
+        indice++;
+      } else {
+        titulo.innerText = "Esses são só alguns dos muitos motivos...";
+        descricao.innerText = "Você é o amor da minha vida 💘";
+        descricao.classList.add("mostrar");
+      }
+    }
+  </script>
+  <div class="balao" onclick="window.location.href='index.html';">
+  ⬅ Voltar para a Pagina principal
+</div>
+
+<div class="decoracao-coracoes">
+    <span class="coração"></span>
+    <span class="coração"></span>
+    <span class="coração"></span>
+    <span class="coração"></span>
+    <span class="coração"></span>
+  </div>
+
+
+
+
+</body>
+</html>

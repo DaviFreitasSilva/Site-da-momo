@@ -1,0 +1,223 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ffe4e1, #ffc0cb, #ff8da1);
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #B3182E;
+}
+
+.cartinha {
+  background-color: #fff0f5;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  margin: 0 auto 30px;
+  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.descricao {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.descricao.mostrar {
+  display: block;
+  opacity: 1;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: none;
+  background-color: #ff69b4;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #ff4a9d;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.balao {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffb6c1;
+  padding: 15px 20px;
+  border-radius: 30px;
+  color: #5A1E1E;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+  animation: pulo 1.5s infinite;
+  transition: transform 0.2s;
+}
+
+.balao:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .cartinha {
+    padding: 20px;
+  }
+
+  .titulo {
+    font-size: 1.3rem;
+  }
+
+  .descricao {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .balao {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .cartinha {
+    padding: 15px;
+  }
+
+  .titulo {
+    font-size: 1.1rem;
+  }
+
+  .descricao {
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .balao {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+}
+
+.decoracao-coracoes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.coração {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    transform: rotate(45deg);
+    animation: flutuar 10s linear infinite;
+    opacity: 0.7;
+}
+
+.coração::before,
+.coração::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    border-radius: 50%;
+}
+
+.coração::before {
+    top: -10px;
+    left: 0;
+}
+
+.coração::after {
+    top: 0;
+    left: -10px;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(100vh) rotate(45deg);
+    }
+    100% {
+        transform: translateY(-10vh) rotate(45deg);
+    }
+}
+
+.coração:nth-child(1) {
+    left: 10%;
+    animation-duration: 12s;
+}
+
+.coração:nth-child(2) {
+    left: 30%;
+    animation-duration: 9s;
+}
+
+.coração:nth-child(3) {
+    left: 50%;
+    animation-duration: 11s;
+}
+
+.coração:nth-child(4) {
+    left: 70%;
+    animation-duration: 8s;
+}
+
+.coração:nth-child(5) {
+    left: 90%;
+    animation-duration: 13s;
+}

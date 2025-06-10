@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosso Amor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1><span id="typing"></span></h1>
+
+    <h2>Te amo, meu amor 💖</h2>
+    <p>Estamos juntos há:</p>
+    <div id="contador"></div>
+
+    <section class="galeria">
+      <h2>Nossas lembranças</h2>
+      <div class="carrossel-galeria">
+        <div class="carrossel-auto">
+          <img src="imagens/nosso-amor1.jpeg" class="slide ativo" alt="Imagem 1" />
+          <img src="imagens/nosso-amor2.jpeg" class="slide" alt="Imagem 2" />
+          <img src="imagens/nosso-amor3.jpeg" class="slide" alt="Imagem 3" />
+          <img src="imagens/nosso-amor4.jpeg" class="slide" alt="Imagem 4" />
+          <img src="imagens/nosso-amor5.jpeg" class="slide" alt="Imagem 5" />
+          <img src="imagens/nosso-amor6.jpeg" class="slide" alt="Imagem 6" />
+          <img src="imagens/nosso-amor7.jpeg" class="slide" alt="Imagem 7" />
+          <img src="imagens/nosso-amor8.jpeg" class="slide" alt="Imagem 8" />
+          <img src="imagens/nosso-amor9.jpeg" class="slide" alt="Imagem 9" />
+          <img src="imagens/nosso-amor10.jpeg" class="slide" alt="Imagem 10" />
+          <img src="imagens/nosso-amor11.jpeg" class="slide" alt="Imagem 11" />
+          <img src="imagens/nosso-amor12.jpeg" class="slide" alt="Imagem 12" />
+          <img src="imagens/nosso-amor13.jpeg" class="slide" alt="Imagem 13" />
+          <img src="imagens/nosso-amor14.jpeg" class="slide" alt="Imagem 14" />
+          <img src="imagens/nosso-amor15.jpeg" class="slide" alt="Imagem 15" />
+          <img src="imagens/nosso-amor16.jpeg" class="slide" alt="Imagem 16" />
+          <img src="imagens/nosso-amor17.jpeg" class="slide" alt="Imagem 17" />
+          <img src="imagens/nosso-amor18.jpeg" class="slide" alt="Imagem 18" />
+          <img src="imagens/nosso-amor19.jpeg" class="slide" alt="Imagem 19" />
+          <!-- Adicione mais imagens conforme necessário -->
+        </div>
+      </div>
+      <p class="dedicacao">
+        Primeiro Dia dos Namorados com a mulher mais linda e perfeita do universo, que me ensinou o verdadeiro significado do amor, do companheirismo e que me encanta de um jeito diferente todos os dias. Eu não tenho como descrever em palavras o quanto você é importante para mim. Nunca estive tão feliz em toda a minha vida.
+        <br /><br />
+        Fico ansioso só de pensar nas centenas de histórias que ainda vamos viver e que poderemos contar para os nossos futuros filhos. Tony, Guto e Sofia vão amar ouvir a história do nosso primeiro "eu te amo", do dia em que eu te pedi em namoro e nós juntamos nossas vidas para sempre. E nós vamos mostrar para eles essa cartinha do nosso primeiro Dia dos Namorados, para verem o quanto o pai deles é romântico.
+        <br /><br />
+        Eu te amo mais que tudo nesse mundo. Prometo sempre proteger você, cuidar de você e te dar muito carinho. Obrigado por fazer de mim o homem mais feliz do mundo.
+        <br /><br />
+        Feliz Dia dos Namorados, minha pituca.
+      </p>
+    </section>
+
+    <!-- Modal para imagem ampliada -->
+    <div id="modal" class="modal" onclick="fecharModal()">
+      <span class="fechar">&times;</span>
+      <img class="modal-conteudo" id="imagem-ampliada" />
+    </div>
+
+    <section class="mensagem">
+      <h2>Meu Amorzinho</h2>
+      <p>Você é a melhor parte da minha vida. Cada momento ao seu lado é mágico. 💕</p>
+    </section>
+
+    <section class="video">
+      <h2>Nossos Vídeos</h2>
+      <div class="carrossel-videos">
+        <button class="seta esquerda" onclick="mudarVideo(-1)">&#10094;</button>
+
+        <div class="video-container">
+          <video controls class="video-ativo">
+            <source src="videos/videos-nosso-amor1.mp4" type="video/mp4" />
+          </video>
+          <video controls>
+            <source src="videos/videos-nosso-amor2.mp4" type="video/mp4" />
+          </video>
+          <video controls>
+            <source src="videos/videos-nosso-amor3.mp4" type="video/mp4" />
+          </video>
+          <video controls>
+            <source src="videos/videos-nosso-amor4.mp4" type="video/mp4" />
+          </video>
+          <video controls>
+            <source src="videos/videos-nosso-amor5.mp4" type="video/mp4" />
+          </video>
+          <video controls>
+            <source src="videos/videos-nosso-amor6.mp4" type="video/mp4" />
+          </video>
+          <video controls>
+            <source src="videos/videos-nosso-amor7.mp4" type="video/mp4" />
+          </video>
+          <video controls>
+            <source src="videos/videos-nosso-amor8.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <button class="seta direita" onclick="mudarVideo(1)">&#10095;</button>
+      </div>
+
+      <div class="dedicacao-extra" id="dedicacaoExtra">
+        Hoje é um dia muito especial pra você e pra mim também. Espero que você tenha aproveitado muito o seu dia e que eu tenha conseguido te encher de beijinhos...
+        <span id="textoCompleto" style="display: none;">
+           Agora, meu amor tem 18 anos, o primeiro de muitos aniversários que vou passar ao seu lado. Você me conquistou nos meus sonhos antes mesmo de ficarmos juntos. E o melhor de tudo é que meu sonho se realizou no mesmo dia. Desde a primeira vez que dormimos juntos, eu me apaixonei pelo seu carinho, pelo seu olhar. Voltei de Porto triste, achando que tinha desperdiçado a chance de ficar com a mulher mais linda do mundo. Mas graças a Deus, depois de alguns dias, a gente ficou pela primeira vez e foi incrível. Naquele momento percebi o quanto a gente tinha química. Fico feliz só de lembrar da gente se beijando na cama do Guilherme. Depois da nossa primeira ficada, os dias passaram voando. O que antes parecia ser só uma ficada se transformou em meses ao seu lado, e foram tantos momentos incríveis com você, meu amor. Eu poderia passar horas escrevendo sobre todas as nossas histórias juntos. Era impossível não me apaixonar. Comecei a me perguntar se o que eu estava sentindo era amor, já que nunca tinha sentido nada parecido antes. No fundo, eu sabia que já te amava por vários motivos. Te amo porque você ri das minhas bobagens. Te amo porque você tem um jeitinho único que me encanta. Te amo porque você cuida de mim e é a mulher mais carinhosa do mundo comigo. Eu amo as nossas conversas, as nossas brincadeiras, amo jogar com você, amo assistir filmes e séries com você, amo dormir com você (e não só dormir, né?). Eu faço qualquer coisa pra estar ao seu lado. Penso em você 24 horas por dia. Imagino um futuro com você. Me sinto o melhor homem do mundo quando estou contigo. Quero estar com você todos os dias. Então aquele dia chegou. Eu não lembro bem o assunto, mas lembro que você vivia dizendo que eu não gostava de você o suficiente pra dizer que te amava. Até que eu tive que dizer. E foi dentro da Americanas do shopping Raposo que eu falei "Eu te amo" pela primeira vez. Não era um lugar especial, mas se tornou depois daquele momento. Quando você disse que também me amava e a gente se beijou, tive a certeza de que você era a mulher da minha vida. A Luiza, que antes tinha receio de baixar a guarda e demonstrar sentimentos, estava na minha frente dizendo que me amava. E em menos de um mês, eu já estava te pedindo em namoro, um dos momentos mais felizes da minha vida. E aqui estamos, quase 3 meses depois, comemorando o aniversário do amor da minha vida. Muito obrigado por tudo, amor. Por todos os beijos, os abraços, os "eu te amo". Com você eu me sinto o homem mais feliz e amado do mundo. Não existe uma pessoa que combine mais comigo do que você. Você sempre sabe o que eu estou pensando. A gente tem brincadeiras que só nós dois entendemos e eu amo demais brincar com você. Faço de tudo só pra ver você sorrir com esse sorriso mais lindo do mundo. A gente se completa, amor. Não tem como não pensar que nascemos um para o outro. Todos os momentos com você, mesmo os mais difíceis, me ensinaram algo. Principalmente a ser um namorado melhor pra você e para o nosso relacionamento. Com certeza ainda temos muito a aprender e a melhorar, mas vamos fazer isso juntos. Enfrentar qualquer dificuldade ao seu lado fica mais fácil. Já vivemos tanta coisa, mas ainda temos uma vida inteira pela frente, o mundo todo pra conhecer e tantas experiências pra viver juntos. Eu te amo infinito, momo. Um beijo do seu homem e companheiro pra vida inteira. ❤️ 
+        </span>
+        <button onclick="mostrarTextoCompleto()" id="botaoMostrar" class="botao-ver-mais">Ver mais</button>
+      </div>
+        <div class="balao" onclick="window.location.href='joguinho.html';"> 
+          💌 Um joguinho pra você se divertir
+        </div>
+        
+        <div class="balao motivos" onclick="window.location.href='motivos.html';">
+      💖 Motivos para te amar
+        </div>
+      </div>
+
+
+    </section>
+  </div>
+
+  <!-- Decoração -->
+  <div class="decoracao-coracoes">
+    <span class="coração"></span>
+    <span class="coração"></span>
+    <span class="coração"></span>
+    <span class="coração"></span>
+    <span class="coração"></span>
+  </div>
+
+  <!-- Modal de vídeo -->
+  <div id="modalVideo" class="modal" onclick="fecharModalVideo()">
+    <span class="fechar">&times;</span>
+    <video id="videoAmpliado" class="modal-conteudo" controls autoplay></video>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Efeito de digitação
+    const text = "Feliz Dia dos Namorados";
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 100);
+      }
+    }
+    type();
+
+    // Contador
+    const dataInicio = new Date("2024-10-26T00:00:00");
+    const contador = document.getElementById("contador");
+
+    function atualizarContador() {
+      const agora = new Date();
+      const diferenca = agora - dataInicio;
+      const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diferenca / (1000 * 60)) % 60);
+      const segundos = Math.floor((diferenca / 1000) % 60);
+
+      contador.textContent = `${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+
+    // Carrossel de imagens
+    const slides = document.querySelectorAll(".carrossel-auto .slide");
+    let slideAtual = 0;
+
+    function mostrarProximoSlide() {
+      slides[slideAtual].classList.remove("ativo");
+      slideAtual = (slideAtual + 1) % slides.length;
+      slides[slideAtual].classList.add("ativo");
+    }
+
+    setInterval(mostrarProximoSlide, 4000);
+
+    // Modal imagem
+    const modal = document.getElementById("modal");
+    const imagemAmpliada = document.getElementById("imagem-ampliada");
+
+    function abrirImagem(img) {
+      modal.style.display = "flex";
+      imagemAmpliada.src = img.src;
+    }
+
+    function fecharModal() {
+      modal.style.display = "none";
+    }
+
+    // Mostrar texto completo
+    function mostrarTextoCompleto() {
+      document.getElementById("textoCompleto").style.display = "inline";
+      document.getElementById("botaoMostrar").style.display = "none";
+    }
+
+    // Navegação de vídeos
+    let videoAtual = 0;
+    const videos = document.querySelectorAll(".video-container video");
+
+    function mostrarVideo(indice) {
+      videos.forEach((video, i) => {
+        video.pause();
+        video.classList.remove("video-ativo");
+        if (i === indice) video.classList.add("video-ativo");
+      });
+    }
+
+    function mudarVideo(direcao) {
+      videoAtual += direcao;
+      if (videoAtual < 0) videoAtual = videos.length - 1;
+      if (videoAtual >= videos.length) videoAtual = 0;
+      mostrarVideo(videoAtual);
+    }
+
+    mostrarVideo(videoAtual);
+  </script>
+</body>
+</html>
