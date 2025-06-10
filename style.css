@@ -417,8 +417,8 @@ h1 {
 
 @media (max-width: 480px) {
   .container {
-    max-width: 90vw;
-    width: 90vw;
+    max-width: 80vw;
+    width: 80vw;
     padding: 20px;
   }
 }
