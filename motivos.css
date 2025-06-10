@@ -163,42 +163,39 @@ button:active {
 
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-  }
-
   .cartinha {
     width: 90vw;
-    height: auto;
+    min-height: 60vh;
     max-height: 85vh;
-    padding: 20px;
     border-radius: 20px;
     background-size: cover;
     background-position: center;
-    margin: auto;
+    padding: 20px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    overflow-y: auto;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
   }
 
-  .titulo {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+  .titulo, .descricao {
+    display: none; /* permanecem ocultos até clicar */
   }
 
-  .descricao {
-    font-size: 1rem;
-    line-height: 1.6;
+  .descricao.mostrar {
+    display: block;
+    opacity: 1;
+    margin-top: 10px;
   }
 
   button {
     font-size: 1rem;
     padding: 12px 24px;
     border-radius: 25px;
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   .balao {
