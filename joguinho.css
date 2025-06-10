@@ -1,0 +1,116 @@
+body {
+   background: linear-gradient(to right, #ffe4e1, #ffc0cb, #ff8da1);
+  color: #892822;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #B3182E;
+}
+
+.tabuleiro {
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo padrão para computadores */
+@media (min-width: 768px) {
+  .tabuleiro {
+    grid-template-columns: repeat(4, 120px);
+  }
+
+  .carta {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Estilo adaptado para celulares */
+@media (max-width: 767px) {
+  .tabuleiro {
+    grid-template-columns: repeat(3, 1fr); /* 3 cartas por linha no celular */
+  }
+
+  .carta {
+    width: 28vw;
+    height: 28vw;
+  }
+}
+
+
+.carta-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.carta.virada .carta-inner {
+  transform: rotateY(180deg);
+}
+
+.carta-frente, .carta-verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.carta-frente {
+  background-color: #fff;
+  background-image: url('imagens/coraçoes-parallax1jpeg.png'); /* adicione um verso bonito */
+  background-size: cover;
+}
+
+.carta-verso {
+  transform: rotateY(180deg);
+  background-size: cover;
+  background-position: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #B3182E;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #892822;
+}
+.balao {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffb6c1;
+  padding: 15px 20px;
+  border-radius: 30px;
+  color: #5A1E1E;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+  animation: pulo 1.5s infinite;
+  transition: transform 0.2s;
+}
+
+.balao:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}

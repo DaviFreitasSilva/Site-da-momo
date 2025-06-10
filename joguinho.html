@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jogo da Memória Romântico 💘</title>
+  <link rel="stylesheet" href="joguinho.css" />
+</head>
+<body>
+  <audio id="musica" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg" />
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <h1>Nosso Jogo da Memória 💞</h1>
+  <div class="tabuleiro" id="tabuleiro"></div>
+
+  <button onclick="reiniciarJogo()">Reiniciar</button>
+
+  <script>const imagens = [
+  'imagens/nosso-amor1.jpeg',
+  'imagens/nosso-amor2.jpeg',
+  'imagens/nosso-amor17.jpeg',
+  'imagens/nosso-amor12.jpeg',
+  'imagens/nosso-amor5.jpeg',
+  'imagens/nosso-amor6.jpeg',
+  'imagens/nosso-amor7.jpeg',
+  'imagens/nosso-amor8.jpeg',
+  'imagens/nosso-amor9.jpeg',
+  'imagens/nosso-amor10.jpeg'
+];
+
+let cartas = [];
+let primeiraCarta = null;
+let bloqueado = false;
+let paresEncontrados = 0;
+
+
+function embaralhar(array) {
+  return array.concat(array).sort(() => 0.5 - Math.random());
+}
+
+function criarCarta(src) {
+  const carta = document.createElement('div');
+  carta.classList.add('carta');
+  carta.innerHTML = `
+    <div class="carta-inner">
+      <div class="carta-frente"></div>
+      <div class="carta-verso" style="background-image: url('${src}')"></div>
+    </div>
+  `;
+
+  carta.addEventListener('click', () => {
+    if (bloqueado || carta.classList.contains('virada')) return;
+    carta.classList.add('virada');
+
+    if (!primeiraCarta) {
+      primeiraCarta = carta;
+    } else {
+      const segundaCarta = carta;
+      const primeiraImg = primeiraCarta.querySelector('.carta-verso').style.backgroundImage;
+      const segundaImg = segundaCarta.querySelector('.carta-verso').style.backgroundImage;
+
+      if (primeiraImg === segundaImg) {
+  paresEncontrados++;
+  primeiraCarta = null;
+
+  // Verifica se o jogo foi concluído
+  if (paresEncontrados === imagens.length) {
+    setTimeout(() => mostrarEfeitoFinal(), 500);
+  }
+} else {
+
+        bloqueado = true;
+        setTimeout(() => {
+          primeiraCarta.classList.remove('virada');
+          segundaCarta.classList.remove('virada');
+          primeiraCarta = null;
+          bloqueado = false;
+        }, 1000);
+      }
+    }
+  });
+
+  return carta;
+}
+
+function iniciarJogo() {
+  const tabuleiro = document.getElementById('tabuleiro');
+  tabuleiro.innerHTML = '';
+  primeiraCarta = null;
+  bloqueado = false;
+
+  cartas = embaralhar(imagens);
+  cartas.forEach(img => {
+    const carta = criarCarta(img);
+    tabuleiro.appendChild(carta);
+  });
+}
+
+function reiniciarJogo() {
+  iniciarJogo();
+}
+function mostrarEfeitoFinal() {
+  const confete = document.createElement('div');
+  confete.innerHTML = '<h2 style="color:#D94A70">Parabéns, você completou o jogo! 💖</h2>';
+  document.body.appendChild(confete);
+  confete.style.position = 'fixed';
+  confete.style.top = '50%';
+  confete.style.left = '50%';
+  confete.style.transform = 'translate(-50%, -50%)';
+  confete.style.fontSize = '2em';
+  confete.style.background = 'rgba(255, 255, 255, 0.9)';
+  confete.style.padding = '20px';
+  confete.style.borderRadius = '15px';
+  confete.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)';
+  confete.style.zIndex = 1000;
+
+  // Adiciona leve animação de "batimento"
+  confete.animate(
+    [
+      { transform: 'scale(1)', opacity: 1 },
+      { transform: 'scale(1.1)', opacity: 0.8 },
+      { transform: 'scale(1)', opacity: 1 }
+    ],
+    {
+      duration: 1000,
+      iterations: 3
+    }
+  );
+
+  setTimeout(() => confete.remove(), 4000);
+}
+
+
+window.onload = iniciarJogo;
+
+</script>
+<div class="balao" onclick="window.location.href='index.html';">
+  ⬅ Voltar para a Pagina principal
+</div>
+
+</body>
+</html>
+

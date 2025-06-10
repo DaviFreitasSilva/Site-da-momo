@@ -1,0 +1,134 @@
+body {
+      background: linear-gradient(to right, #ffe4e1, #ffc0cb, #ff8da1);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .cartinha {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      padding: 30px;
+      margin-top: 30px;
+      width: 320px;
+      transition: all 0.4s ease;
+    }
+
+    .titulo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #d63384;
+    }
+
+    .descricao {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #333;
+      display: none;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 22px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    .titulo-lista {
+  text-align: center;
+  font-size: 24px;
+  color: #c2185b;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.motivos-lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.motivos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.motivo-item {
+  background-color: #fff;
+  border-left: 5px solid #ec407a;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.motivo-titulo {
+  width: 300px;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d81b60;
+  display: flex;
+  align-items: center;
+}
+
+
+.numero {
+  margin-right: 10px;
+}
+
+.motivo-descricao {
+  padding: 0 20px 15px;
+  font-size: 16px;
+  display: none;
+  color: #444;
+}
+
+.balao {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffb6c1;
+  padding: 15px 20px;
+  border-radius: 30px;
+  color: #5A1E1E;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+  animation: pulo 1.5s infinite;
+  transition: transform 0.2s;
+}
+.balao:hover {
+  transform: scale(1.1);
+}
+@keyframes pulo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.balao.motivos {
+  bottom: 90px; /* empurra o balão para cima */}
+
+
+  
