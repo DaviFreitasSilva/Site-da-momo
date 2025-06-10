@@ -166,7 +166,7 @@ button:active {
   .cartinha {
     width: 90vw;
     min-height: 60vh;
-    max-height: 85vh;
+    max-height: 80vh;
     border-radius: 20px;
     background-size: cover;
     background-position: center;
