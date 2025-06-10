@@ -165,21 +165,23 @@ button:active {
 @media (max-width: 480px) {
   h1 {
     font-size: 1.4rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .cartinha {
-    width: 95vw;
-    height: 85vh;
+    width: 90vw;
+    height: auto;
+    max-height: 85vh;
+    padding: 20px;
     border-radius: 20px;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-    padding: 20px 15px;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
   }
 
   .titulo {
@@ -189,14 +191,14 @@ button:active {
 
   .descricao {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   button {
     font-size: 1rem;
     padding: 12px 24px;
-    border-radius: 20px;
-    margin-top: 20px;
+    border-radius: 25px;
+    margin-top: 15px;
   }
 
   .balao {
@@ -204,6 +206,7 @@ button:active {
     padding: 10px;
   }
 }
+
 
 
 
